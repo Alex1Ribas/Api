@@ -4,7 +4,7 @@ const { medicos } = require("../data/data");
 function atualizarMedicos(req, res) {
     const {id} = req.params
     const idInt = parseInt(id)
-    const { nomeMedico, especialidade } = req.body;
+    const { nome, especialidade } = req.body;
 
     if (!nomeMedico || !especialidade) {
         return res.status(400).send({ message: 'Todos os campos (nome, especialidade) são obrigatórios.' });
@@ -18,7 +18,7 @@ function atualizarMedicos(req, res) {
 
     medicos[index] = {
         ...medicos[index],
-        nome: nomeMedico,
+        nome: nome,
         especialidade: especialidade
     };
 

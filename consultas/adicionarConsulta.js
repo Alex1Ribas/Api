@@ -1,13 +1,13 @@
 const {consultas, id } = require("../data/data");
 
-function criarConsulta(req, res) {
+function adicionarConsulta(req, res) {
     id.value++;
 
     const novaConsulta = {
         id: id,
         data: req.body.data,
-        medico: req.body.idMedico,
-        paciente: req.body.idPaciente,
+        medicoid: req.body.idMedico,
+        pacienteid: req.body.idPaciente,
         descricao: req.body.descricao
     };
 
@@ -18,4 +18,4 @@ function criarConsulta(req, res) {
     });
 }
 
-module.exports = { criarConsulta };
+module.exports = { adicionarConsulta };
