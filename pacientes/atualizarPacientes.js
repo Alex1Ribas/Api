@@ -1,13 +1,15 @@
 const { pacientes } = require("../data/data");
 
 function atualizarPacientes(req, res) {
-    const { id, nome, dataNascimento } = req.body;
+    const {id} = req.params
+    const idInt = parseInt(id)
+    const { nome, dataNascimento } = req.body;
 
-    if (!id || !nome || !dataNascimento) {
-        return res.status(400).send({ message: 'Todos os campos (id, nome, idade) são obrigatórios.' });
+    if (!nome || !dataNascimento) {
+        return res.status(400).send({ message: 'Todos os campos (nome, Data de Nascimento) são obrigatórios.' });
     }
 
-    const index = pacientes.findIndex(paciente => paciente.id === id);
+    const index = pacientes.findIndex(paciente => paciente.id === idInt);
 
     if (index === -1) {
         return res.status(404).send({ message: 'Paciente não encontrado.' });

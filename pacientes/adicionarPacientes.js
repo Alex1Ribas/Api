@@ -4,7 +4,7 @@ function adicionarPacientes(req, res) {
     id.value++;
     
     const novoPaciente = {
-        id: id(),
+        id: id.value,
         nome: req.body.nomePaciente,
         dataNascimento: req.body.dataNascimento
     };

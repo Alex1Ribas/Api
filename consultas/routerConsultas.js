@@ -5,8 +5,9 @@ const { criarConsulta } = require('./criarConsultas');
 const ListarConsultas = require('./listarCosultas');
 const atualizarConsultas = require('./atualizarConsultas');
 const removerConsultas = require('./removerConsultas');
+const buscaPorConsulta = require('./buscaPorConsulta');
 
-
+router.get('/', buscaPorConsulta)
 router.get('/', ListarConsultas);
 router.post('/', criarConsulta);
 router.put('/', atualizarConsultas);
