@@ -1,6 +1,6 @@
-const { medicos } = require("./medico/data");
+const { medicos } = require("../data/data");
 
-function search(req, res) {
+function buscaPorMedico(req, res) {
   const { nome, especialidade } = req.query;
 
   const results = medicos.filter(m => {
@@ -16,4 +16,4 @@ function search(req, res) {
   res.status(200).send(results);
 }
 
-module.exports = search;
+module.exports = buscaPorMedico;

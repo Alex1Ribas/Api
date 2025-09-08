@@ -1,6 +1,6 @@
-const { pacientes } = require("./paciente/data");
+const { pacientes } = require("../data/data");
 
-function search(req, res) {
+function buscaPorPaciente(req, res) {
   const { nome, dataNascimento } = req.query;
 
   const results = pacientes.filter(p => {
@@ -17,4 +17,4 @@ function search(req, res) {
   res.status(200).send(results);
 }
 
-module.exports = search;
+module.exports = buscaPorPaciente;

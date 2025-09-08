@@ -1,6 +1,6 @@
-const { consultas } = require("./consulta/data"); 
+const { consultas } = require("../data/data");
 
-function search(req, res) {
+function buscaPorConsulta(req, res) {
   const { data, idMedico, idPaciente, descricao } = req.query;
 
   const results = consultas.filter(c => {
@@ -19,4 +19,4 @@ function search(req, res) {
   res.status(200).send(results);
 }
 
-module.exports = search;
+module.exports = buscaPorConsulta;

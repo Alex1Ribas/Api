@@ -5,11 +5,8 @@ const listarPacientes = require('./listarPacientes');
 const { adicionarPacientes } = require('./adicionarPacientes');
 const atualizarPacientes = require('./atualizarPacientes');
 const removerPacientes = require('./removerPaciente');
-const buscaPorPaciente = require('../Busca/buscaPorPaciente');
 
 
-
-router.get('/busca', buscaPorPaciente)
 router.get('/', listarPacientes);
 router.post('/', adicionarPacientes);
 router.put('/', atualizarPacientes);
