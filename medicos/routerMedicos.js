@@ -5,7 +5,7 @@ const listarMedicos = require('./listaMedicos');
 const { adicionarMedicos } = require('./adicionarMedicos');
 const atualizarMedicos = require('./atualizarMedicos');
 const removerMedicos = require('./removerMedicos');
-const buscaPorMedico = require('./buscaPorMedico');
+const buscaPorMedico = require('../Busca/buscaPorMedico');
 
 
 router.get('/',buscaPorMedico);

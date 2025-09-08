@@ -4,7 +4,7 @@ function adicionarConsulta(req, res) {
     id.value++;
 
     const novaConsulta = {
-        id: id,
+        id: id.value,
         data: req.body.data,
         medicoid: req.body.idMedico,
         pacienteid: req.body.idPaciente,

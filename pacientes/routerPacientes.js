@@ -5,7 +5,7 @@ const listarPacientes = require('./listarPacientes');
 const { adicionarPacientes } = require('./adicionarPacientes');
 const atualizarPacientes = require('./atualizarPacientes');
 const removerPacientes = require('./removerPaciente');
-const buscaPorPaciente = require('./buscaPorPaciente');
+const buscaPorPaciente = require('../Busca/buscaPorPaciente');
 
 
 

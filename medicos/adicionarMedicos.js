@@ -1,11 +1,9 @@
-// medicos/adicionarMedicos.js
-
 const { id, medicos } = require("../data/data");
 
 function adicionarMedicos(req, res) {
     const { nome, especialidade } = req.body;
 
-    if (!nomeMedico || !especialidade) {
+    if (!nome || !especialidade) {
         return res.status(400).send({ message: "Nome e especialidade são obrigatórios." });
     }
 
@@ -14,7 +12,7 @@ function adicionarMedicos(req, res) {
     const novoMedico = {
         id: id.value,
         nome: nome,
-        especialidade
+        especialidade: especialidade
     };
 
     medicos.push(novoMedico);
